@@ -1,14 +1,17 @@
-#ifndef IESP8266OTA_H_
-#define IESP8266OTA_H_
+/*
+  Todo: Quit wasting time and roast some beans
+*/
+#ifndef WIRELESSCOFFEE_H_
+#define WIRELESSCOFFEE_H_
 
-#include <ESP8266WebServer.h>
-//Do we need additional headers for ESP.restart() and Update.begin()?
-
-class iESP8266OTA {
-  ESP8266WebServer mWebServer;
+class WirelessCoffee {
   public:
-    iESP8266OTA();
-    handleClient();
+    begin(); //Initalises read/write communication
+    end();	 //For shutdown? (Needed?)
+    sleep(); //Enter low power mode
+    wake();  //Leave low power mode (Needed?)
+    requestStatus(); //Request coffee status from network
+    sendStatus(); //Broadcast coffee status to network
 };
 
-#endif /* IESP8266OTA_H_ */
+#endif /* WIRELESSCOFFEE_H_ */
